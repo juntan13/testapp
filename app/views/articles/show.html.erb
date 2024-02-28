@@ -1,0 +1,22 @@
+
+
+
+
+
+<td>
+  <% if can? :update, @article %>
+    <%= link_to 'Edit', edit_article_path(@article) %>
+  <% end %>
+</td>
+<td>
+  <% if can? :destroy, @article %>
+    <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+</td>
+
+
+<%= render @article %>
+
+<td>
+<%= link_to "Back to articles", articles_path %>
+</td>
